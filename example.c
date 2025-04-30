@@ -12,10 +12,10 @@ int main(void) {
     uint8_t iv[16];
     uint8_t ciphertext[32];
     uint8_t plaintext[32];
-  
+
     // iv || ciphertext
     recv_message(message);
-
+    
     if (sizeof(iv) >= 16) {
         memcpy(iv, message, 16);
     }
