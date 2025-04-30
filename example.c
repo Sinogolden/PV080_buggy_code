@@ -16,10 +16,10 @@ int main(void) {
     // iv || ciphertext
     recv_message(message);
 
-    if (iv.length >= 16) {
+    if (sizeof(iv) >= 16) {
         memcpy(iv, message, 16);
     }
-    if (ciphertext.length >= 48 - 16) {
+    if (sizeof(ciphertext) >= 48 - 16) {
         memcpy(ciphertext, message + 16, 48);
     }
 
